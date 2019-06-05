@@ -1,27 +1,13 @@
 # Yelp Reviewer Toughness Classification
 
-This repository documents the creation of a Machine Learning model to classify Yelp Reviewers as hard, medium, or easy reviewers.   While a lot of work has been done on the Yelp dataset we used, most of it had focused on restaurants, not users. 
+## Project Description
+The Yelp dataset is well known in the data science community and has been the subject of numerous machine learning projects due to its size, richness, and scope. However, the majority of the analysis that's been performed on this dataset has been focused on understanding the businesses rather than the users of Yelp. For the final project for USF's Intro to Machine Learning course, our team chose to instead focus on the users by training a classification model for reviewer toughness (hard, medium, or easy) based on a corpus of their reviews.
 
-After exploring the data, we decided to join the business and reviews tables to calculate an average review star delta for each reviewer, an average of the difference between the restaurant's stars on Yelp and the stars the reviewer gave the restaurant.   
+To accomplish this goal, we joined multiple tables and manipulated the data in order to create labels for each reviewer. We then prepared the review text data for modeling by performing NLP techniques such as tokenization, lemmatization, stop word removal, and TFIDF vectorization. We trained multiple machine learning models and found that multinomial logistic regression performed the best based on our chosen evaluation metrics of recall for the easy and hard classes. *Note that neural networks were outside the scope of this intro course and therefore were not able to be used.*
 
-Then we classed reviewers with an average star delta of +0.5 stars (one standard deviation) above the restaurant's stars as easy reviewers, and reviewers with an average star delta of more -0.5 as hard reviewers, and the rest as medium. 
+## Important Links
 
-The most performant models were MultiNomial Logistic Regression, Support Vector Machine, and Passive Aggressive Classifier. We performed grid searches across models and our choice of vectorizer to find optimal hyperparameters. 
-
-MultiNomial Logistic Regression performed the best overall.   Besides code for our final models, we’ve included our data processing, exploratory data analysis, and preliminary models.
-
-Main project notebook files:
-
-yelp_data_processing.ipynb - pre-processing code
-
-hard_easy_reviewer_model-v2.ipynb - modeling code
-
-cust_stop_words.py - custom stop words set
-
-plots.py - finalized plots built from pre processing code
-
-yelp_deck_v2.pdf - Presentation slides
-
-DataSet: https://www.yelp.com/dataset
-
-Contributors: Evan Calkins,  Xu Lian, Brian Dorsey, and Quinn Keck 
+- [Final presentation slides](yelp_deck_v2.pdf)
+- [Data preprocessing notebook](yelp_data_processing.ipynb)
+- [Modeling notebook](hard_easy_reviewer_model-v2.ipynb)
+- [More details on Yelp dataset](yelp_deck_v2.pdf)
