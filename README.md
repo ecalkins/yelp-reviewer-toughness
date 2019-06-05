@@ -7,7 +7,7 @@ To accomplish this goal, we joined multiple tables and manipulated the data in o
 
 ## Important Links
 
-- [Final presentation slides](yelp_deck_v2.pdf)
+- [Presentation slides](yelp_deck_v2.pdf)
 - [Data preprocessing notebook](yelp_data_processing.ipynb)
 - [Modeling notebook](hard_easy_reviewer_model-v2.ipynb)
 - [More details on Yelp dataset](yelp_deck_v2.pdf)
